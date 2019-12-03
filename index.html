@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>섯다</title>
+    <style>
+    body{
+        background-color:forestgreen;
+        height: 100% ;
+        margin: 0px 0px 0px 0px ;
+        overflow: hidden ;
+        padding: 0px 0px 0px 0px ;
+        width: 100% ;
+    }
+    #btnstart{
+        position: absolute;
+        width: 250px;
+        height: 150px;
+        color:indigo;
+        margin: -30px -30px -30px -30px ;
+        cursor: pointer;
+    }
+    #shuffle{
+        position: absolute;
+        width: 150;
+        height: 70;
+        left: 78% ;
+        margin: -0px 0px 0px -0px ;
+        top: 90% ;
+        cursor: pointer;
+    }
+    .center{
+        position: absolute;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: auto;
+        left: 50% ; 
+        margin: -51px 0px 0px -51px ;
+        top: 50% ;
+        z-index: 30;
+        }
+    .hidei{
+        position: absolute;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: auto;
+        left: 50% ; 
+        margin: -51px 0px 0px -51px ;
+        top: 50% ;
+        }
+    
+    .card{
+        position: absolute;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: auto;
+        left: 50% ; 
+        margin: -51px 0px 0px -51px ;
+        top: 50% ;
+        }
+    .btnshuffle{
+        position: absolute;
+        width: 200px;
+        height: 50px;
+        left: 80% ;
+        margin: -0px 0px 0px -0px ;
+        top: 90% ;
+        cursor: pointer;
+    }
+    #result{
+        position: absolute;
+        width: 150;
+        height: 70;
+        left: 78% ;
+        margin: -0px 0px 0px -0px ;
+        top: 81% ;
+        cursor: pointer;
+
+    }
+    label[for="playresult1"]{
+        font-size: 20px;
+        position: absolute;
+        width: 200px;
+        height: 50px;
+        left: 600px ;
+        margin: -0px 0px 0px -0px ;
+        top:  60px;
+        color: pink ;
+    }
+     label[for="playresult2"]{
+        font-size: 20px;
+        position: absolute;
+        width: 200px;
+        height: 50px;
+        left: 850px ; 
+        margin: -0px 0px 0px -0px ;
+        top:  460px; 
+        color: pink ;
+     }
+     label[for="playresult3"]{
+        font-size: 20px;
+        position: absolute;
+        width: 200px;
+        height: 50px;
+        left: 570px ; 
+        margin: -0px 0px 0px -0px ;
+        top:  650px; 
+        color: pink ;
+     }
+     label[for="playresult4"]{
+        font-size: 20px;
+        position: absolute;
+        width: 200px;
+        height: 50px;
+        left: 30px ; 
+        margin: -0px 0px 0px -0px ;
+        top: 430px; 
+        color: pink ;
+     }
+     label[for="playresult5"]{
+        font-size: 20px;
+        position: absolute;
+        width: 200px;
+        height: 50px;
+        left: 450px ; 
+        margin: -0px 0px 0px -0px ;
+        top: 120px; 
+        color:  mediumspringgreen;
+     }
+     label[for="playresult6"]{
+        font-size: 20px;
+        position: absolute;
+        width: 200px;
+        height: 50px;
+        left: 820px ;
+        margin: -0px 0px 0px -0px ;
+        top: 480px; 
+        color:  mediumspringgreen;
+     }
+     label[for="playresult7"]{
+        font-size: 20px;
+        position: absolute;
+        width: 200px;
+        height: 50px;
+        left: 430px ; 
+        margin: -0px 0px 0px -0px ;
+        top: 560px;
+        color:  mediumspringgreen;
+     }
+     label[for="playresult8"]{
+        font-size: 20px;
+        position: absolute;
+        width: 200px;
+        height: 50px;
+        left: 30px ;
+        margin: -0px 0px 0px -0px ;
+        top: 450px;
+        color:  mediumspringgreen;
+     }
+     label[for="playresult9"]{
+        font-size: 33px;
+        position: absolute;
+        width: 450px;
+        height: 40px;
+        left: 330px ;
+        margin: -0px 0px 0px -0px ;
+        top: 430px;
+        color:  orange;
+     }
+     #jokbo{
+        font-size: 15px;
+        position: absolute;
+        margin: -0px 0px 0px -30px ;
+        top: 630px;
+     }
+     #frame{
+        position:absolute ; 
+        z-index : 30;
+        width: 430px;
+        height: 480px;
+        left: 10px ;
+        margin: -0px 0px 0px -0px ;
+        bottom: 60px;
+     }
+     #jokbo2{
+        font-size: 15px;
+        position: absolute;
+        margin: -0px 0px 0px -0px ;
+        left: 80px;
+        top: 630px;
+     }
+     #frame2{
+        position: absolute;
+        width: 430px;
+        height: 250px;
+        left: 10px ;
+        margin: -0px 0px 0px -0px ;
+        bottom: 80px;
+     }
+     .다시{
+        position:absolute ; 
+        width: 200px;
+        height: 50px;
+        left: 83% ;
+        margin: -0px 0px 0px -0px ;
+        top: 90% ;
+        font-size: 30px; 
+        font: italic;
+     }
+     #help{
+        position:absolute ; 
+        width: 100px;
+        height: 100px;
+        left: 90% ;
+        margin: -0px 0px 0px -0px ;
+        top: 1% ;
+        font-size: 30px; 
+        cursor: pointer;
+     }
+     .P1{
+        
+        width: 450px;
+        height: 160px;
+        left: 50% ;
+        margin: -0px 50px 100px 230px ;
+        top: 1% ;
+        font-size: 30px; 
+        border: 5px #cfc5c5 solid;
+     }
+     .P2{
+        width: 160px;
+        height: 380px;
+        margin: -140px -0px 0px 765px;
+        font-size: 100px; 
+        border: 5px #cfc5c5 solid;
+     }
+     .P3{
+        width: 410px;
+        height: 150px;
+        margin: 30px -0px 0px 225px;
+        font-size: 100px; 
+        border: 5px #cfc5c5 solid;
+     }
+     .P4{
+        width: 160px;
+        height: 380px;
+        margin: -600px -0px 0px 0px;
+        font-size: 100px; 
+        border: 5px #cfc5c5 solid;
+     }
+     #money1{
+        left: 30% ;
+        top: 4% ;
+        width: 200px;
+        height: 30px;
+        margin: -8px -0px 0px -40px;
+        font-size: 18px; 
+        border: 5px #ffffff solid;
+        color: rgb(89, 241, 0);
+        text-align: right;
+     }
+     #money2{
+        left: 30% ;
+        top: 4% ;
+        width: 195px;
+        height: 30px;
+        margin: -23px -0px 0px -40px;
+        font-size: 18px; 
+        border: 5px #ffffff solid;
+        color: rgb(89, 241, 0);
+        text-align: right;
+     }
+     #money3{
+        left: 30% ;
+        top: 4% ;
+        width: 183px;
+        height: 30px;
+        margin: -25px -0px 0px -40px;
+        font-size: 18px; 
+        border: 5px #ffffff solid;
+        color: rgb(89, 241, 0);
+        text-align: right;
+     }
+     #money4{
+        left: 30% ;
+        top: 4% ;
+        width: 195px;
+        height: 30px;
+        margin: -23px -0px 0px -40px;
+        font-size: 18px; 
+        border: 5px #ffffff solid;
+        color: rgb(89, 241, 0);
+        text-align: right;
+     }
+     .don{
+        position: absolute;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: auto;
+        left: 55% ; 
+        margin: -51px 0px 0px -51px ;
+        top: 30% ;
+     }
+     #p11{
+        width: 210px;
+        height: 120px;
+        margin: -0px 0px 0px -40px ;
+     }
+     #p12{
+        width: 200px;
+        height: 150px;
+        margin: 0px 0px 0px -40px ;
+     }
+     #p13{
+        width: 193px;
+        height: 115px;
+        margin: 0px 0px 0px -40px ;
+     }
+     #p14{
+        width: 200px;
+        height: 150px;
+        margin: -0px 0px 0px -40px ;
+     }
+     #price{
+        position: absolute;
+        display: block;
+        border: 3px dotted #eaee0d;
+        left: 25% ; 
+        top: 25% ;
+        font-size: 40px;
+        border-bottom: 5px solid rgb(12, 12, 48);
+     }
+
+    
+    </style>
+</head>
+<body>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <img src="https://user-images.githubusercontent.com/53854831/62607414-0b937b80-b939-11e9-943d-dd47efe1beff.jpg" id="frame" style="display: none">
+    <img id="jokbo" src="https://user-images.githubusercontent.com/53854831/62607455-11895c80-b939-11e9-8ba8-cf3c08c6a06b.png">
+    <img src="https://user-images.githubusercontent.com/53854831/62607458-1221f300-b939-11e9-9d8d-3820a5907d9d.jpg" id="frame2" style="display: none">
+    <img id="jokbo2" src="https://user-images.githubusercontent.com/53854831/62607456-1221f300-b939-11e9-9f8d-dda9ba0cdb2c.png">
+    <img id="help" src="https://user-images.githubusercontent.com/53854831/62610307-65e30b00-b93e-11e9-9f0c-e3513a3b4110.png">
+        
+    <div class="cardgroup">
+    <div class="card"><img src="https://user-images.githubusercontent.com/53854831/62607416-0b937b80-b939-11e9-8867-f8bd950bcf72.jpg" id="01"></div>
+    <div class="card"><img src="https://user-images.githubusercontent.com/53854831/62607417-0c2c1200-b939-11e9-8790-28b0e5e40ecf.jpg" id="02"></div>
+    <div class="card"><img src="https://user-images.githubusercontent.com/53854831/62607419-0c2c1200-b939-11e9-9d87-9f377a217ea3.jpg" id="03"></div>
+    <div class="card"><img src="https://user-images.githubusercontent.com/53854831/62607421-0c2c1200-b939-11e9-9481-4b8366fd5645.jpg" id="04"></div>
+    <div class="card"><img src="https://user-images.githubusercontent.com/53854831/62607422-0cc4a880-b939-11e9-8a3b-13d1dae1e0d1.jpg" id="05"></div>
+    <div class="card"><img src="https://user-images.githubusercontent.com/53854831/62607424-0d5d3f00-b939-11e9-9484-d69d664615e2.jpg" id="06"></div>
+    <div class="card"><img src="https://user-images.githubusercontent.com/53854831/62607425-0d5d3f00-b939-11e9-9d8c-a36021c2ba76.jpg" id="07"></div>
+    <div class="card"><img src="https://user-images.githubusercontent.com/53854831/62607426-0d5d3f00-b939-11e9-9561-c4f751dc5945.jpg" id="08"></div>
+    <div class="card"><img src="https://user-images.githubusercontent.com/53854831/62607427-0d5d3f00-b939-11e9-9860-e35961d9d6a4.jpg" id="09"></div>
+    <div class="card"><img src="https://user-images.githubusercontent.com/53854831/62607428-0df5d580-b939-11e9-813e-62caf7945995.jpg" id="10"></div>
+    <div class="card"><img src="https://user-images.githubusercontent.com/53854831/62607430-0df5d580-b939-11e9-9c6c-da12e2edbd5a.jpg" id="11"></div>
+    <div class="card"><img src="https://user-images.githubusercontent.com/53854831/62607431-0df5d580-b939-11e9-9a14-24db37ab6d98.jpg" id="12"></div>
+    <div class="card"><img src="https://user-images.githubusercontent.com/53854831/62607432-0e8e6c00-b939-11e9-82f0-eebff1ac65fd.jpg" id="13"></div>
+    <div class="card"><img src="https://user-images.githubusercontent.com/53854831/62607433-0e8e6c00-b939-11e9-8473-ce7683ea5ecf.jpg" id="14"></div>
+    <div class="card"><img src="https://user-images.githubusercontent.com/53854831/62607435-0e8e6c00-b939-11e9-9677-78ee9e738af8.jpg" id="15"></div>
+    <div class="card"><img src="https://user-images.githubusercontent.com/53854831/62607436-0f270280-b939-11e9-8074-a8ed6484881c.jpg" id="16"></div>
+    <div class="card"><img src="https://user-images.githubusercontent.com/53854831/62607437-0f270280-b939-11e9-9c94-d47366fbdceb.jpg" id="17"></div>
+    <div class="card"><img src="https://user-images.githubusercontent.com/53854831/62607440-0fbf9900-b939-11e9-8de4-4290d5642b0f.jpg" id="18"></div>
+    <div class="card"><img src="https://user-images.githubusercontent.com/53854831/62607442-0fbf9900-b939-11e9-8754-17ef738120d2.jpg" id="19"></div>
+    <div class="card"><img src="https://user-images.githubusercontent.com/53854831/62607443-10582f80-b939-11e9-933d-df738d8a32da.jpg" id="20"></div>
+    </div>
+    <div class="center"><img src="https://user-images.githubusercontent.com/53854831/62607445-10582f80-b939-11e9-9b77-4b212f3ee018.jpg"></div>
+    <div class="hidegroup">
+    <div class="hidei"><img src="https://user-images.githubusercontent.com/53854831/62607445-10582f80-b939-11e9-9b77-4b212f3ee018.jpg" id="01"></div>
+    <div class="hidei"><img src="https://user-images.githubusercontent.com/53854831/62607445-10582f80-b939-11e9-9b77-4b212f3ee018.jpg" id="02"></div>
+    <div class="hidei" id="hideo"><img src="https://user-images.githubusercontent.com/53854831/62607445-10582f80-b939-11e9-9b77-4b212f3ee018.jpg" id="03"></div>
+    <div class="hidei"><img src="https://user-images.githubusercontent.com/53854831/62607445-10582f80-b939-11e9-9b77-4b212f3ee018.jpg" id="04"></div>
+    <div class="hidei"><img src="https://user-images.githubusercontent.com/53854831/62607445-10582f80-b939-11e9-9b77-4b212f3ee018.jpg" id="05"></div>
+    <div class="hidei"><img src="https://user-images.githubusercontent.com/53854831/62607445-10582f80-b939-11e9-9b77-4b212f3ee018.jpg" id="06"></div>
+    <div class="hidei" id="hidep"><img src="https://user-images.githubusercontent.com/53854831/62607445-10582f80-b939-11e9-9b77-4b212f3ee018.jpg" id="07"></div>
+    <div class="hidei"><img src="https://user-images.githubusercontent.com/53854831/62607445-10582f80-b939-11e9-9b77-4b212f3ee018.jpg" id="08"></div>
+    </div>
+    
+
+    <div>
+    <img id="btnstart" src="https://user-images.githubusercontent.com/53854831/62607450-10f0c600-b939-11e9-98cb-b13523705b65.png" style="width: 200", height="150">
+    </div>
+    <div>
+    <img id="shuffle" src="https://user-images.githubusercontent.com/53854831/62610531-d4c06400-b93e-11e9-8708-6e78f83ce6f3.png" style="width: 100", height="70" >
+    </div>
+    <div>
+    <img id="result" src="https://user-images.githubusercontent.com/53854831/62610310-68456500-b93e-11e9-9e92-3e92bdfb7284.png" style="width: 100", height="70">
+    </div>
+    <div id="playresult">
+     <label for="playresult1" style="size: 10px" value="확인창1"></label> 
+     <label for="playresult2" style="size: 10px" value="확인창2"></label>  
+     <label for="playresult3" style="size: 10px" value="확인창3"></label>   
+     <label for="playresult4" style="size: 10px" value="확인창4"></label>
+     <label for="playresult5" style="size: 10px" value="확인창5"></label> 
+     <label for="playresult6" style="size: 10px" value="확인창6"></label>  
+     <label for="playresult7" style="size: 10px" value="확인창7"></label>   
+     <label for="playresult8" style="size: 10px" value="확인창8"></label>
+     <label for="playresult9" style="size: 10px" value="확인창9"></label>   
+    </div>
+    <div >
+        <ul class="P1">
+        <img src="https://user-images.githubusercontent.com/53854831/62755638-cb0a3e00-baaf-11e9-902d-b8ba43ca242e.jpg" id="p11">
+        <p  class="money" id="money1" value="1,000,000"></p>
+        </ul>
+        <ul class="P2">
+        <img src="https://user-images.githubusercontent.com/53854831/62755640-ccd40180-baaf-11e9-9c2c-daff861dd968.jpg" id="p12">
+        <p  class="money" id="money2" value="1,000,000"></p>
+        </ul>
+        <ul class="P3">
+        <img src="https://user-images.githubusercontent.com/53854831/62755849-8c28b800-bab0-11e9-9805-43215bd717b7.jpg" id="p13">
+        <p  class="money" id="money3" value="1,000,000"></p>
+        </ul>
+        <ul class="P4">
+        <img src="https://user-images.githubusercontent.com/53854831/62755639-cba2d480-baaf-11e9-9ee8-629aba54c6d2.jpg" id="p14">
+        <p  class="money" id="money4" value="1,000,000"></p>
+        </ul>     
+    </div>
+        <div class="don">
+        <img src="https://user-images.githubusercontent.com/53854831/62749486-912d3d80-ba97-11e9-8b13-e79f1a308c81.png" >
+        </div>
+        <div>
+
+        </div>
+
+    </div>
+        <div>
+            <p id="price">안녕하십니까</p>
+        </div>
+    <!-- <input type="button" id="shuffle" value="shuffle"> -->
+   
+   
+    <script>
+        $("#help").click(function(){//도움말
+            alert("1.적정 화면 비율이있습니다 사이즈를 맞추면서 확인하세요")
+            alert("2.NewGame을 누릅니다")
+            alert("3.룰을 잘모르면 Hint과 Hint2를 참고합니다")
+            alert("4.Hint에 나온 족보대로 게임의 승부를 봅니다.")
+            alert("5.만약 족보에 없으면 두 패의 숫자를 더해서 1의 자리수만 가지고 승부를 합니다")
+            alert("6.결과를 보고싶으면 Result를 누릅니다.")
+            alert("7.재게임을 하고싶으면 ReGame을 누릅니다")
+            alert("8.만약 뭔가 안나온다면 대부분은 버그이니 여러번 누르세요")
+        });
+            
+        
+        flag=false; //족보보기
+        $(document).ready(function(){//족보확인1
+			var b =$("#frame");
+		 $("#jokbo").click(function(){
+			    if(flag == false){
+			    b.hide(500);
+			    flag =true;
+		    }
+		    else{
+			    b.show(1000);
+			    flag =false;
+		            };
+	         });
+            });
+
+        flag=false; //끗계산 보기
+		$(document).ready(function(){//족보확인2
+            
+			var b =$("#frame2");
+		$("#jokbo2").click(function(){//클릭하면 족보보임
+			if(flag == false){
+			b.hide(500);
+			flag =true;
+		}
+		else{
+			b.show(1000);
+			flag =false;
+		};
+	});
+}); 
+
+
+        var leftX = [ 560, 950, 475, 50, 500, 900, 525, 100]; //패 좌표
+        var topY = [ 50, 380, 650, 360, 50, 380, 650, 360];  //패 좌표
+        
+        var p = [20];
+        var player = [8];
+        var card = [8];
+        var hidei = [8];
+        var result = [4];
+        var play = [1000000000, 1000000000, 1000000000, 1000000000];
+        var pandon = 0;
+            
+
+        var sum =0;
+        var num =0;
+        var on = false;
+
+        var labels=$("label");
+        var labelss=$("#win");
+
+        var hiding=$(".hidei");
+        var images=$(".card");
+        
+        p[0]= 1111; //1광
+        p[1]= 111;
+        p[2]= 2222;
+        p[3]= 22;
+        p[4]= 3333;  //3광
+        p[5]= 3; 
+        p[6]= 444;   //비둘기 4
+        p[7]= 44;  
+        p[8]= 5;
+        p[9]= 555;
+        p[10]= 6;
+        p[11]= 66;
+        p[12]= 777;  //돼지 7
+        p[13]= 7; 
+        p[14]= 88;  //8광
+        p[15]= 8;  
+        p[16]= 999;  //진 사구
+        p[17]= 99;  
+        p[18]= 100;
+        p[19]= 100;
+
+    var test = {"3.8광떙" :2421, "1.8광땡" : 1199, "1.3광땡": 1444}
+       var arr = [];
+       for(var i in test){
+           arr.push(test[i]);
+       }
+       arr.sort(function(a,b){return a-b});
+       console.log(arr[0]);
+
+        function don(i){ //돈이미지 움직이는함수
+                $(".don").animate({ 
+                    top: topY[i], 
+                    left: leftX[i] }, 1000);
+                fade();
+            }
+
+        function fade(){//돈이미지 사라지기
+            $(".don").fadeOut(700);
+        }
+
+        function fadei(){//돈이미지 생성되기
+            $(".don").fadeIn(500);
+        }
+    
+        // var length=images.length; 테스트용  
+        /*for(var i=1; i<=20; i++){
+            var img= images.eq(i)
+        } */  
+              
+    $("#btnstart").click(function select(){//마우스클릭으로도 실행할수있는함수
+          shuf();
+            for (var i = 0; i < 8; i++) {
+                card[i] = Math.round((Math.random() * 19));
+                for (var j = 0; j < i; j++) {
+                    if (card[i] == card[j]) {
+                        i--;
+                        break;
+                    }
+                }
+            }    
+        drow(0);
+});
+     $(document).keydown(function select(e){//각종 키다운 전부 넣음
+        //    var q = e.keyCode; call
+        
+        call();
+        function call(){
+        if(e.which =='34'){
+            result[2]=0;
+            show();
+            showWin();
+            }
+         if(e.which =='32'){
+             on=true;
+             harf();
+             shuf();
+             noshow();
+             regame();
+             drow2(0);
+             drow(0);
+         }
+    if(e.which == '40'){
+         check();
+          harf();
+         }
+    if(e.which == '35'){
+          race();
+         }
+    if(e.which == '46'){
+        race();
+        setTimeout(function(){
+        show();
+        showWin();
+        }, 1000);
+    }
+ }
+});
+        function regame(){//게임시작할때 카드변수 재생성하는기능
+            for (var i = 0; i < 8; i++) {
+                card[i] = Math.round((Math.random() * 19));
+                for (var j = 0; j < i; j++) {
+                    if (card[i] == card[j]) {
+                        i--;
+                        break;
+                    }
+                }
+            }
+            if(pandon==0){
+                race();
+            }
+        }
+
+        function showWin(){//두장의 패를 합쳐서 족보만드는함수 
+    if(result[num]==421){
+        result[num]= 5000;
+        labels.eq(num).text("!!! 3.8광땡 !!!");
+    }
+    else if(result[num]==521){
+        labels.eq(num).text("암행어사!!");
+    }
+    else if(result[num]==1199){
+        result[num]= 4500;
+        labels.eq(num).text("!! 1.8광땡 !!");
+    }
+    else if(result[num]==1444){
+        result[num]= 4500;
+        labels.eq(num).text("! 1.3광땡 !");
+    }
+    else if(result[num]==1443){
+        labels.eq(num).text("진(眞)사구");
+    }
+    else if(result[num]==4110){
+        labels.eq(num).text("땡잡이입니다");
+    }
+    else if(result[num]==200){
+        result[num]= 40;
+        labels.eq(num).text("장땡입니다");
+    }
+    else if(result[num]==1098){
+        result[num]= 39;
+        labels.eq(num).text("9땡입니다");
+    }
+    else if(result[num]==96){
+        result[num]= 38;
+        labels.eq(num).text("8땡입니다");
+    }
+    else if(result[num]==784){
+        result[num]= 37;
+        labels.eq(num).text("7땡입니다");
+    }
+    else if(result[num]==72){
+        result[num]= 36;
+        labels.eq(num).text("6땡입니다");
+    }
+    else if(result[num]==543 || result[num]==1043 || result[num]==143){
+        result[num] ==400;
+        labels.eq(num).text("사구입니다");
+    }
+    else if(result[num]==560){
+        result[num]= 35;
+        labels.eq(num).text("5땡입니다");
+    }
+    else if(result[num]==488){
+        result[num]= 34;
+        labels.eq(num).text("4땡입니다");
+    }
+    else if(result[num]==3336){
+        result[num]= 33;
+        labels.eq(num).text("3땡입니다");
+    }
+    else if(result[num]==2244){
+        result[num]= 32;
+        labels.eq(num).text("2땡입니다");
+    }
+    else if(result[num]==1222){
+        result[num]= 31;
+        labels.eq(num).text("1땡입니다");
+    }
+    else if(result[num]==3333 || result[num]==1133 || result[num]==2333 || result[num]==133){
+        result[num] = 20;
+        
+        labels.eq(num).text("알리입니다");
+    }
+    else if(result[num]==1555 || result[num]==1155 || result[num]==555 || result[num]==155){
+        result[num]= 19;
+        labels.eq(num).text("독사입니다");
+    }
+    else if(result[num]==2110 || result[num]==1210 || result[num]==210 || result[num]==1110){
+        result[num]= 18;
+        labels.eq(num).text("구삥입니다");
+    }
+    else if(result[num]==1211 || result[num]==211){
+        result[num]= 17;
+        labels.eq(num).text("장삥입니다");
+    }
+    else if(result[num]==450 || result[num]==510 || result[num]==50 || result[num]==110){
+        result[num] = 16;
+        labels.eq(num).text("세륙입니다");
+    }
+    else if(result[num]==144 || result[num]==544){
+        result[num]= 15;
+        labels.eq(num).text("장사입니다");
+    }
+    else{
+        sum =result[num];
+           if(String(sum).length == 2) {
+                var i = String(sum).substring(1,2);
+                labels.eq(num).text(i+"끗입니다");
+                result[num] = i;
+                console.log("resltnum="+result[num]);
+                //$("label[for ='playresult1']").text(i+"끗입니다");
+           }
+           if(String(sum).length == 3) {
+                var i = String(sum).substring(2,3);
+                labels.eq(num).text(i+"끗입니다");
+                result[num] = i;
+                console.log("resltnum="+result[num]);
+                //$("label[for ='playresult1']").text(i+"끗입니다");
+           }
+           if(String(sum).length == 4) {
+                var i = String(sum).substring(3,4);
+                labels.eq(num).text(i+"끗입니다");
+                result[num] = i;
+                console.log("resltnum="+result[num]);
+                //$("label[for ='playresult1']").text(i+"끗입니다");
+           }
+    }
+    if(num<4){
+    num+=1;
+    //  console.log("num="+num);
+     showWin();
+    }else {
+        win();
+        num =0;
+     }
+};
+
+        function drow(num) {//앞면패 움직이는함수
+            setTimeout(() => {
+           
+            images.eq(card[num]).animate({
+            left:leftX[num],
+             top:topY[num]
+            }, 450);
+            player[num]=p[card[num]];
+            console.log(num+"="+player[num]);
+            result[0] = player[0]+player[4];
+            result[1] = player[1]+player[5];
+            result[2] = player[2]+player[6];
+            result[3] = player[3]+player[7];
+            
+
+            num+=1;
+            if(num < 8){
+                drow(num);
+            }      
+    }, 500);
+}       
+
+        function drow2(num) { //뒷면패 움직이는함수   
+            setTimeout(() => {
+                hidei[num]=num;
+            hiding.eq(hidei[num]).animate({
+            left:leftX[num],
+             top:topY[num]
+            }, 450);
+            
+            num+=1;
+            if(num < 8){
+                drow2(num);
+            }      
+    }, 500);
+} 
+        function show(){//모든 패 보이기
+           $(".card").css('z-index',"10");
+        }
+        function noshow(){//모든패 다시감추기
+           $(".card").css('z-index',"0");
+        }
+
+        function harf(){// 내 패만 확인하는함수
+            if(on==true){
+                on=false;
+                $("#hideo").css('z-index',"1");
+                $("#hidep").css('z-index',"1");
+                noshow();
+                return;
+            }
+            else{
+                on=true;
+                $("#hideo").css('z-index',"-1");
+                $("#hidep").css('z-index',"-1");
+            }
+        }
+        function race(){//돈을 거는 함수
+            for(var j=0; j<4; j++){
+            play[j]=play[j]-50000000;
+            }
+            pandon+=200000000;
+            check();
+        }
+        function check(){ //판돈과 플레이어 돈 확인
+         if(true){
+            var a= {};
+            var gameplay =[[play[0], "아귀"],
+                    [play[1], "고니"],
+                    [play[2], "나!!"],
+                    [play[3], "정마담"]];
+            for(var j=0; j<4; j++){ 
+                // a[j]=play[j];
+                if(play[j]==0){
+                    gameplay.sort(function(a,b){
+                        return a[0]-b[0];
+                    });
+                    console.log(gameplay);
+                    console.log(gameplay[0][0]);
+                    console.log(gameplay[1][1]);
+                    console.log(gameplay[2][0]);
+                    alert(gameplay[3][0]+gameplay[3][1]+"\n"+gameplay[2][0]+"\n"+gameplay[1][0]+"\n"+gameplay[0][0]);
+                     break;
+                    // if(play[3]>play[2] && play[3]>play[1]){
+                    //     if(play[2]>play[1]){
+                    //         alert("1위 정마담!! \n 2위 나!! \n 3위 고니!! \n \n 꼴등 아귀 ㅋㅋ");
+                    //     }
+                    //     else if(play[1]>play[2]){
+                    //         alert("1위 정마담!! \n 2위 고니!! \n 3위 나!! \n \n 꼴등 아귀 ㅋㅋ");
+                    //     }
+                    // }
+                    // else if(play[2]>play[1] && play[2]>play[3]){
+                    //     if(play[1]>play[3]){
+                    //         alert("1위 나!!! \n 2위 고니!! \n 3위 정마담!! \n \n 꼴등 아귀 ㅋㅋ");
+                    //     }
+                    //     else if(play[3]>play[1]){
+                    //         alert("1위 나!!! \n 2위 정마담!! \n 3위 고니!! \n \n 꼴등 아귀 ㅋㅋ");
+                    //     }
+                    // }
+                    // else if(play[1]>play[2] && play[1]>play[3]){
+                    //     if(play[2]>play[3]){
+                    //         alert("1위 고니!! \n 2위 나!! \n 3위 정마담!! \n \n 꼴등 아귀 ㅋㅋ");
+                    //     }
+                    //     else if(play[3]>play[2]){
+                    //         alert("1위 고니!! \n 2위 정마담!! \n 3위 나!! \n \n 꼴등 아귀 ㅋㅋ");
+                    //     } 
+                    // }
+                }
+            }
+        }
+            if(pandon==0){
+                $("#price").html("판돈 : 0원");
+            }    
+            else {
+               var pandon2 = numberToKorean(pandon)
+               $("#price").html("판돈 : "+pandon2+"원");
+            for(var i=0; i<4; i++){
+               $(".money").eq(i).text(numberToKorean(play[i])+"원");
+                }
+            }
+        };
+        $(document).ready(function(){//시작할때 각자의 돈 바로 확인
+            for(var i=0; i<4; i++){
+               $(".money").eq(i).text(numberToKorean(play[i])+"원");
+                }
+        });
+
+        $("#hidep").click(function(){//마우스올리면 패보이기
+            harf();
+        });
+        $(".card").click(function(){//마우스빼면 패 감추기
+            harf();
+        });
+
+
+    $("#shuffle").click(function(){//카드셔플 다시 중앙으로 가기
+         shuf();
+        }); 
+        function shuf(){
+        // $(".card").css("top", $(window).height()/2 +"px");
+        $(".card").animate({top: $(window).height()/2, 
+                            left :$(window).width()/2}, 500);
+        $(".hidei").animate({top: $(window).height()/2, 
+                            left :$(window).width()/2}, 500);
+        $(".don").css({top: $(window).height()/3.33, 
+                            left :$(window).width()/1.82}, 500);
+    
+            for(var i=0; i<9; i++){
+                labels.eq(i).text(" ");
+            }
+            fadei();
+    };
+    
+    function numberToKorean(number){ //돈 한글단위 표시용
+    var inputNumber  = number < 0 ? false : number;
+    var unitWords    = ['', '만', '억', '조', '경'];
+    var splitUnit    = 10000;
+    var splitCount   = unitWords.length;
+    var resultArray  = [];
+    var resultString = '';
+
+    for (var i = 0; i < splitCount; i++){
+         var unitResult = (inputNumber % Math.pow(splitUnit, i + 1)) / Math.pow(splitUnit, i);
+        unitResult = Math.floor(unitResult);
+        if (unitResult > 0){
+            resultArray[i] = unitResult;
+        }
+    }
+
+    for (var i = 0; i < resultArray.length; i++){
+        if(!resultArray[i]) continue;
+        resultString = String(resultArray[i]) + unitWords[i] + resultString;
+    }
+
+    return resultString;
+}
+
+    function win() { //승리 확인용
+        var a,b;
+        if(result[0]==5000||result[2]==5000||result[3]==5000||result[4]==5000){
+            labels.eq(8).text("3.8광땡으로 땡값!")
+            for(i=0; i<4; i++){
+                if(result[i]==5000){
+                    play[i]=play[i]+pandon+600000000;
+                    check();
+                }
+                else{
+                    play[i]=play[i]-200000000;
+                }
+                numberToKorean(play[i]);
+            }
+        }
+    
+         for(i=0; i<4; i++){//암행어사
+             if(result[i]==521 && (result[i+1]==4500 ||result[i+2]==4500 
+                ||result[i+3]==4500 || result[i-1]==4500 || result[i-2]==4500 
+                || result[i-3]==4500 )) {
+                    if(result[i]==521){
+                        play[i]=play[i]+pandon+1000000000;
+                        check();
+                    }
+                 labels.eq(8).text("암행어사 출두야!!(보너스지급)")
+                 }  
+         }
+         for(i=0; i<4; i++){ //진사구파토
+             if(result[i]==1443 && (result[i+1]<4000 || result[i+2]<4000
+                || result[i+3]==4000 || result[i-1]<4000|| result[i-2]<4000 
+                || result[i-3]<4000)){
+                    labels.eq(8).text("진사구로 재경기합니다") 
+                    on=true;
+                setTimeout(function(){
+                harf();
+                shuf();
+                noshow();
+                regame();
+                drow2(0);
+                drow(0);
+                },2000);
+             return;
+             }
+         }
+         for(i=0; i<4; i++){ //땡잡이
+            if(result[i] == 1110){
+                a = 1110;
+            } else if (result[i] <=40 || result[i]>=31){
+                b = result[i];
+            }
+            if(a == 1110 && (b <=40 || b >=31)){
+                if(result[i]==1110){
+                    play[i]=play[i]+pandon+20000000;
+                }
+                labels.eq(8).text("땡잡이!!!(보너스지급)");
+           }
+        }
+         for(i=0; i<4; i++){
+             if(result[i] == 543 || result[i] == 1043 || result[i] == 143){
+                 a=result[i];
+             }else if(result[i]<=35){
+                 b= result[i];
+             }
+             if((a ==543 || a== 143 || a== 1043) && b<=35){
+                labels.eq(8).text("사구로 재경기합니다");
+                on=true;
+                setTimeout(function(){
+                harf();
+                shuf();
+                noshow();
+                regame();
+                drow2(0);
+                drow(0);
+                },2000);
+             return;
+             }
+           }
+        
+        if(result[0]>6000){
+            labels.eq(4).text("예외 확인용");
+        }
+       /* if(true){
+            var number =0;
+        for(var i = 0; i<4; i++){
+            for(var j =0; j<4; j++){
+                if(result[i]>result[j]){
+                labels.eq(j+4).text("졌습니다 ㅠ_ㅠ");
+                number++;
+                }
+                else {
+                number=0;
+                }
+            }
+            if(number!=0){
+                    labels.eq(i+4).text("이겼어요 ~_~");
+                }   
+           }
+     }  중복 for문 나중에 다시 수정 */  
+     else if(result[0]>result[1] && result[0]>result[2] && result[0]>result[3]){
+            labels.eq(4).text("이겼습니다!!");
+            labels.eq(5).text("졌습니다 ㅜ_ㅜ");
+            labels.eq(6).text("졌습니다 ㅜ_ㅜ");
+            labels.eq(7).text("졌습니다 ㅜ_ㅜ");
+            for(i =0; i<4; i++){
+                if(result[i]!=result[0]){
+                    $(".money").eq(i).text(numberToKorean(play[i])+"원");
+                }
+                else{
+                    play[i]=play[i]+pandon;
+                    $(".money").eq(i).text(numberToKorean(play[i])+"원");
+                    don(i);
+                    pandon=0;
+                    check();
+                }
+               
+            }
+        }
+        else if(result[1]>result[0] && result[1]>result[2] && result[1]>result[3]){
+            labels.eq(4).text("졌습니다 ㅜ_ㅜ");
+            labels.eq(5).text("이겼습니다!!");
+            labels.eq(6).text("졌습니다 ㅜ_ㅜ");
+            labels.eq(7).text("졌습니다 ㅠ_ㅠ");
+            for(i =0; i<4; i++){
+                if(result[i]!=result[1]){
+                   
+                    $(".money").eq(i).text(numberToKorean(play[i])+"원");
+                }
+                else{
+                    play[i]=play[i]+pandon;
+                    $(".money").eq(i).text(numberToKorean(play[i])+"원");
+                    don(i);
+                    pandon=0;
+                    check();
+                    console.log(don());
+                }
+            }
+        }
+        else if(result[2]>result[1] && result[2]>result[0] && result[2]>result[3]){
+            labels.eq(4).text("졌습니다 ㅜ_ㅜ");
+            labels.eq(5).text("졌습니다 ㅜ_ㅜ");
+            labels.eq(6).text("이겼어요!!");
+            labels.eq(7).text("졌습니다 ㅠ_ㅠ");
+            for(i =0; i<4; i++){
+                if(result[i]!=result[2]){
+                    
+                    $(".money").eq(i).text(numberToKorean(play[i])+"원");
+                }
+                else{
+                    play[i]=play[i]+pandon;
+                    $(".money").eq(i).text(numberToKorean(play[i])+"원");
+                    don(i);
+                    pandon=0;
+                    check();
+                    console.log(don());
+                }
+                
+            }
+        }
+        else if(result[3]>result[1] && result[3]>result[2] && result[3]>result[0]){
+            labels.eq(4).text("졌습니다 ㅜ_ㅜ");
+            labels.eq(5).text("졌습니다 ㅜ_ㅜ");
+            labels.eq(6).text("졌습니다 ㅜ_ㅜ");
+            labels.eq(7).text("이겼습니다!!");
+            for(i =0; i<4; i++){
+                if(result[i]!=result[3]){
+                    play[i]=play[i];
+                    $(".money").eq(i).text(numberToKorean(play[i])+"원");
+                }
+                else{
+                    play[i]=play[i]+pandon;
+                    $(".money").eq(i).text(numberToKorean(play[i])+"원");
+                    don(i);
+                    pandon=0;
+                    check();
+                    console.log(don());
+                }
+            }
+        }
+        else if(result[0]==result[1] || result[0]==result[2] || result[0]==result[3] ||
+                result[1]==result[2] || result[1]==result[3] || result[2]==result[3]){
+                labels.eq(8).text("같은패로 재경기합니다");
+                on=true;
+                setTimeout(function(){
+                harf();
+                shuf();
+                noshow();
+                regame();
+                drow2(0);
+                drow(0);
+                },2000);
+             return;
+             }
+}
+    </script>
+</body>
+</html>
