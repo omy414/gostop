@@ -18,8 +18,6 @@
 
  8. 예시 그림도 첨부합니다.
 
- ![Alt "예시그림"](https://user-images.githubusercontent.com/53854831/70031042-bff29500-15ed-
+ ![Alt "예시그림"](https://user-images.githubusercontent.com/53854831/70031042-bff29500-15ed-11ea-9ccb-5ad5fccc3a37.png "시작화면")
 
-11ea-9ccb-5ad5fccc3a37.png "시작화면")
-
- <a href="https://google.com" target="_blank" rel="noopener">GOOGLE</a>
+ <a href="/gitfth/gostop/index.html" target="_blank" rel="noopener">게임 해보기</a>
