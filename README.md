@@ -6,6 +6,14 @@
 Link: [gostop]
 [gostop]: https://omy414.github.io/gostop/ "Go Game"
 
+  게임방법
+  ----------
+ 1.Delete: 결과보기
+ 2.End : 배팅
+ 3.PageDown: 죽기
+
+ 게임 소개
+ ----------
  1. 한국 고스톱의 미니게임중 하나인 섯다를 만들었습니다.
 
  2. 학원 HTML 수업 중간중간 시간내서 만든 결과물입니다.
