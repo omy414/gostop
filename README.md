@@ -18,7 +18,6 @@
 
  8. 예시 그림도 첨부합니다.
 
- ![Alt "예시그림"](https://user-images.githubusercontent.com/53854831/70031042-bff29500-15ed-11ea-9ccb-5ad5fccc3a37.png "시작화면")
  Screenshots
  -----------
  <img src="https://user-images.githubusercontent.com/53854831/70031042-bff29500-15ed-11ea-9ccb-5ad5fccc3a37.png"><!--게임화면-->
@@ -62,6 +61,5 @@
 <img src="https://user-images.githubusercontent.com/53854831/62755640-ccd40180-baaf-11e9-9c2c-daff861dd968.jpg"><!--고니-->
 <img src="https://user-images.githubusercontent.com/53854831/62755849-8c28b800-bab0-11e9-9805-43215bd717b7.jpg"><!--프로필-->
 
-
-
- <a href=" https://omy414.github.io/gostop/" target="_blank" rel="noopener">게임 해보기</a>
+-----------
+<a href=" https://omy414.github.io/gostop/" target="_blank" rel="noopener">게임 해보기</a>
