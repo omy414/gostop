@@ -3,6 +3,8 @@
 	===============
 	
 <a href=" https://omy414.github.io/gostop/" target="_blank" rel="noopener">게임 해보기</a>
+Link: [gostop]
+[gostop]: https://omy414.github.io/gostop/ "Go Game"
 
  1. 한국 고스톱의 미니게임중 하나인 섯다를 만들었습니다.
 
